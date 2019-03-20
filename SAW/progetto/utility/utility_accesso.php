@@ -78,16 +78,16 @@
         return $data;
     }
 
-    function QueryRegistration($username, $psw){
+    function QueryRegistration($username, $psw, $email){
 
-        $elem = array($username,$psw);
+        $elem = array($username,$psw, $email);
 
-        if(insert_info("utenti", $elem)){
-            set_login();
-            header("Location: pagina_privata.php"); //nel concreto ragioneremo su dove mandarlo
-        }else{
-            echo "non ti sei registrato con successo";
-            header("Location: index.php");
+        $key = array("username", "password", "mail");
+
+        if(!insert_info("utenti", $key, $elem)){
+            $_SESSION['error'] = "INSERT per registrazione non è andata a buon fine";
+            header("Location: pagina_errore.php");
+            exit();
         }
     }
 
