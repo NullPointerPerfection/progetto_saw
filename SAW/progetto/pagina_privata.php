@@ -16,8 +16,14 @@
 </head>
 <body>
 
-<button onclick="<?php logout(); ?>"> ciao
-</button>
+<form method="POST">
+    <button type="submit" name="invio"> Loguot </button>
+</form>
+
+<?php
+    if(isset($_POST['invio']))
+        logout();
+?>
 
 </body>
 </html>

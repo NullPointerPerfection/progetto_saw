@@ -3,7 +3,8 @@
 
     function logout(){
         session_destroy();
-        header("Location: index.php");
+        header("Location: home.html");//TO BE CHANGE
+        exit();
     }
 
     function set_login() {
@@ -47,6 +48,7 @@
                     set_info_accesso($row);
 
                     header("Location: pagina_privata.php");
+                    exit();
                 } else {
                     $_SESSION['loginerr'] = " non ti sei loggato con successo: username e/o password non corrette";
                 }
