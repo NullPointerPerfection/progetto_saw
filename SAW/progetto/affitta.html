@@ -16,6 +16,9 @@
 </head>
 
 <body>
+
+
+
 	
 	<div class="incima">
 		<div class="mezzo">
@@ -202,19 +205,18 @@
 	function signin(){
 		window.location.href = "register.html";
 	}
-	
+
 	$("#test").click(function(){
 		$("#pink").toggle();
 	});
+
+	$(document.body).click(function(){
+		if(!$('#pink').hidden())
+			$("#pink").hide();
+	});
+
 </script>
 
-    <script>
-        var $div = $('#pink');
-        $(document.body).click(function(){
-            if (!$div.has(this).length) { // if the click was not within $div
-                $div.hide();
-            }
-        });
-    </script>
+
 
 </body>

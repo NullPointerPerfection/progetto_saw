@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include_once 'utility/debug.php';
+//include_once 'utility/debug.php';
 include 'utility/connessione.php';
 include 'utility/utility.php';
 include_once 'utility/utility_accesso.php';

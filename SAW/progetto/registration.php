@@ -32,7 +32,7 @@
 
             <label for="password"> <span class="uno">P</span>assword:<br> </label>
             <input class="boxes" type="password" placeholder="" id="psw" name="psw" required title="Almeno 8 caratteri, tra cui una lettera maiuscola e un numero." pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
-            <span class="glyphicon glyphicon-eye-open"></span>
+            <span onmouseover="return mostra()" onmouseout=" return mostra()" class="glyphicon glyphicon-eye-open"></span>
             <br><br>
             <?php echo $_SESSION["pswErr"]; ?>
 
@@ -49,6 +49,17 @@
         </form>
     </div>
 
+
+    <script>
+        function mostra() {
+            var x = document.getElementById("psw");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+        </script>
 
 
 </body>
