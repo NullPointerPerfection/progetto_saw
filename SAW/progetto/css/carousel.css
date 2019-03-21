@@ -190,23 +190,20 @@ br:after {
 }
 
 
-.social{
+/*.social{
     text-align:center;
-
     float:left;
     padding-left: 21.4%;
     padding-right: 8%;
-    }
+    }*/
 .you{
     text-align:center;
-
     float:left;
     padding-right: 8.5%;
     padding-left: 8.5%;
     }
 .more{
     text-align:center;
-
     float:left;
     padding-left: 8%;
     padding-right: 21.4%;
@@ -214,7 +211,8 @@ br:after {
 
 .tipo{
     font-family: std;
-    font-size: 28px;
+    font-size: 24px;
+    display: inline;
 }
 
 a.tipo:link, a.tipo:visited {
