@@ -9,6 +9,7 @@
     <title> Sign In </title>
     <link rel="stylesheet" type="text/css" href="css/register.css">
     <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
 </head>
 <body>
@@ -30,8 +31,9 @@
 
 
             <label for="password"> <span class="uno">P</span>assword:<br> </label>
-            <input class="boxes" type="password" placeholder="" id="psw" name="psw" required title="Almeno 8 caratteri, tra cui una lettera maiuscola e un numero."
-                   pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"> <br><br>
+            <input class="boxes" type="password" placeholder="" id="psw" name="psw" required title="Almeno 8 caratteri, tra cui una lettera maiuscola e un numero." pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+            <span class="glyphicon glyphicon-eye-open"></span>
+            <br><br>
             <?php echo $_SESSION["pswErr"]; ?>
 
 
@@ -46,6 +48,8 @@
             <br><br> <div class="kylobot"> <span class="uno">S</span>ei gia registrato? Clicca <a href="login.html" class="lil"> qui </a>. </div>
         </form>
     </div>
+
+
 
 </body>
 </html>
