@@ -38,8 +38,12 @@ body{
   z-index: 2;
   position: fixed;
   top: 0%;
-  right: 5%;
+  right: 2%;
   height: 9.2%;
+}
+
+.mdx{
+	margin-right: 30px;
 }
 
 .login{
@@ -170,12 +174,13 @@ img.navbar-brand{
 
 .hidfix{
 	position: fixed;
-	width: 50%;
-	background-color: #5a5a5a;
-	right:0%;
+	width: 300px;
+	top:9.2%;
+	background-color: #1c1c1c;
+	right:2%;
 	z-index: 20;
 	display:none;
-	
+	text-align: center;
 }
 
 .loggg{
@@ -193,4 +198,75 @@ img.navbar-brand{
 	left: 20%;
 	display: inline;
     position:relative;
+}
+
+.hilo{
+	width:100%;
+	height: auto;
+	text-align:center;
+	background: linear-gradient(to top, black, #6B0000);
+}
+
+.hilo2{
+	width:100%;
+	height: auto;
+	text-align:center;
+	background: linear-gradient(to top, black, #212121);
+}
+
+.sociallogo{
+	position: relative;
+	left: 5%;
+	width:30%;
+}
+hr{
+	margin-top: 0px;
+    margin-bottom: 0px;
+    border: 0;
+    border-top: 2px solid; 
+    color: black;
+}
+
+.csttl{
+	font-size: 48px;
+	text-align: center;
+	font-family: std;
+}
+
+.cstxt{
+	font-size: 24px;
+	text-align: justify;
+	font-family: std;
+	color: #777;
+	margin-bottom: 0px;
+}
+
+.who{
+	width: 80%;
+	margin: auto;
+}
+
+.vr{  
+	display: inline;
+    border:         none;
+    border-left:    1px solid hsla(200, 10%, 50%,100);
+    height:         500px;
+    width:          700px; 
+    margin-left:5px;
+    margin-right: 6px;      
+}
+
+.fotlog{
+	font-family:horror;
+	font-size: 36px;
+	text-align: center;
+	letter-spacing: 3px;
+    word-spacing: 20px;
+    
+    text-shadow: 0 0 6px #000000;
+}
+.minitxt{
+	font-family: std;
+	font-size: 16px;
+	text-align: center;
 }

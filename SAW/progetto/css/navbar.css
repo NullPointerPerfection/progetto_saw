@@ -106,7 +106,7 @@ img.navbar-brand{
 .hidfix{
 	position: fixed;
 	width: 50%;
-	background-color: #5a5a5a;
+	background-color: #333333;
 	right:0%;
 	z-index: 20;
 	display:none;
