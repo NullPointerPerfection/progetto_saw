@@ -208,4 +208,13 @@
 	});
 </script>
 
+    <script>
+        var $div = $('#pink');
+        $(document.body).click(function(){
+            if (!$div.has(this).length) { // if the click was not within $div
+                $div.hide();
+            }
+        });
+    </script>
+
 </body>
