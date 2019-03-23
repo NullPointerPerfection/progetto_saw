@@ -33,7 +33,7 @@
             <?php echo $_SESSION["usernameErr"]; ?>
 
             <label for="password"> <span class="uno">P</span>assword:<br> </label>
-            <input class="boxes pwd" type="password" placeholder="" id="psw" name="psw" required title="Almeno 8 caratteri, tra cui una lettera maiuscola e un numero." pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+            <input class="boxes" type="password" placeholder="" id="psw" name="psw" required title="Almeno 8 caratteri, tra cui una lettera maiuscola e un numero." pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
 
             <span class="input-group-btn">
             <button id="box" class="btn btn-default reveal" type="button"><i id="occhio" class="glyphicon glyphicon-eye-open"></i></button>

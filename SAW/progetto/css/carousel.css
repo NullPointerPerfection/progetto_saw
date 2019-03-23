@@ -82,7 +82,7 @@ a.letter:hover, a.letter:active {
     color: #a8a8a8;
     text-decoration: none;
     text-align: center;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black !important;}
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black !important;
 }
 
 .shadow{
@@ -226,5 +226,5 @@ a.tipo:hover, a.tipo:active {
     color: #a8a8a8;
     text-decoration: none;
     text-align: center;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black !important;}
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black !important;
 }

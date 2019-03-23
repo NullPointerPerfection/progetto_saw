@@ -68,7 +68,7 @@ a.rad:hover, a.rad:active {
     color: #333333;
     text-decoration: none;
     text-align: center;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black !important;}
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black !important;
 }
 
 .line{
@@ -174,7 +174,7 @@ img.navbar-brand{
 
 .hidfix{
 	position: fixed;
-	width: 300px;
+	width: 225px;
 	top:9.2%;
 	background-color: #1c1c1c;
 	right:2%;
@@ -269,4 +269,65 @@ hr{
 	font-family: std;
 	font-size: 16px;
 	text-align: center;
+}
+
+.inlo{
+  border: none;
+  border-bottom: 3px double #910505;
+  outline: none;
+  color: #bababa;
+  background-color: #1c1c1c;
+}
+
+.jum{
+	position: relative;
+	top: 10px;
+	width:100%;
+	text-align: center;
+	font-size: 32px;
+	font-family: std;
+	color: #777;
+	margin-bottom: 5px;
+}
+
+.bbk{
+	border: 2px solid black;
+}
+
+.bolo{
+    background-color: #910505;
+    font-family: std;
+    font-size: 18px;
+    color: black;
+    border-color: black;
+    width: 80px;
+    height: 30px;
+    border-radius: 4px;
+	margin-bottom: 5px;
+}
+.bolo:focus{
+	outline:none;
+    background-color: black;
+    color: #910505;
+}
+.whitebolo{
+    background-color: #bababa;
+    font-family: std;
+    font-size: 18px;
+    color: black;
+    border-color: black;
+    width: 80px;
+    height: 30px;
+    border-radius: 4px;
+	margin-bottom: 5px;
+}
+.whitebolo:focus{
+	outline:none;
+    background-color: black;
+    color: #bababa;
+}
+
+.baba{
+	color: #bababa;
+	font-size: 14px;
 }
