@@ -9,7 +9,10 @@
     <title> Sign In </title>
     <link rel="stylesheet" type="text/css" href="css/register.css">
     <link rel="stylesheet" type="text/css" href="css/font.css">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -29,19 +32,23 @@
             <input class="boxes" type="text" placeholder="" id="username" name="username" required> <br><br>
             <?php echo $_SESSION["usernameErr"]; ?>
 
-
             <label for="password"> <span class="uno">P</span>assword:<br> </label>
-            <input class="boxes" type="password" placeholder="" id="psw" name="psw" required title="Almeno 8 caratteri, tra cui una lettera maiuscola e un numero." pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
-            <span onmouseover="return mostra()" onmouseout=" return mostra()" class="glyphicon glyphicon-eye-open"></span>
+            <input class="boxes pwd" type="password" placeholder="" id="psw" name="psw" required title="Almeno 8 caratteri, tra cui una lettera maiuscola e un numero." pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+
+            <span class="input-group-btn">
+            <button id="box" class="btn btn-default reveal" type="button"><i id="occhio" class="glyphicon glyphicon-eye-open"></i></button>
+          </span>
+
             <br><br>
             <?php echo $_SESSION["pswErr"]; ?>
 
+            <div class="container">
 
             <label for="password"> <span class="uno">C</span>onferma <span class="uno">P</span>assword:<br> </label>
             <input class="boxes" type="password" placeholder="" id="psw-repeat" name="psw-repeat" required title="Almeno 8 caratteri, tra cui una lettera maiuscola e un numero."
                    pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"> <br><br>
             <?php echo $_SESSION["repswErr"]; ?>
-
+            </div>
 
             <button class="bottoni" type="submit"> Registrati </button>
 
@@ -49,17 +56,21 @@
         </form>
     </div>
 
-
     <script>
-        function mostra() {
-            var x = document.getElementById("psw");
-            if (x.type === "password") {
-                x.type = "text";
+        $("#box").on('click',function() {
+            var $pwd = $("#psw");
+            if ($pwd.attr('type') === 'password') {
+                $pwd.attr('type', 'text');
+                $('#occhio').addClass("glyphicon-eye-close");
+                $('#occhio').removeClass("glyphicon-eye-open");
+
             } else {
-                x.type = "password";
+                $pwd.attr('type', 'password');
+                $('#occhio').removeClass("glyphicon-eye-close");
+                $('#occhio').addClass("glyphicon-eye-open");
             }
-        }
-        </script>
+        });
+    </script>
 
 
 </body>
