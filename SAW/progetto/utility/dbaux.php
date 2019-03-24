@@ -4,6 +4,12 @@
 
     include_once 'connessione.php';
 
+    function search($value){
+        global $con;
+        $query = "SELECT *, MATCH(nome, descrizione) AGAINST('".$value."') AS attinenza FROM articoli WHERE MATCH(nome, descrizione) AGAINST('".$value."') ORDER BY attinenza DESC";
+        return mysqli_query($con, $query);
+    }
+
     function get_info($table, $column, $condition){
         global $con;
 
@@ -33,10 +39,6 @@
         }
         $query = rtrim($query,','). ");";
         stripslashes($query);
-
-        //$_SESSION['error'] = $query;
-        //header("Location: pagina_errore.php");
-        //exit();
 
         $res = mysqli_query($con,$query);
 

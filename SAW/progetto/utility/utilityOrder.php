@@ -3,9 +3,8 @@
 
     include_once 'dbaux.php';
 
-    function search($id){
-        $condition = "nome=" . $id;
-        $res = get_info("articoli", "*", $condition);
+    function my_search($id){
+        $res = search($id);
 
         if (!$res) return "not fuond";
         if (mysqli_num_rows($res) == 0) return "nessun risultato";

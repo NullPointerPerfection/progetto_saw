@@ -35,10 +35,6 @@
             <label for="password"> <span class="uno">P</span>assword:<br> </label>
             <input class="boxes" type="password" placeholder="" id="psw" name="psw" required title="Almeno 8 caratteri, tra cui una lettera maiuscola e un numero." pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
 
-            <span class="input-group-btn">
-            <button id="box" class="btn btn-default reveal" type="button"><i id="occhio" class="glyphicon glyphicon-eye-open"></i></button>
-          </span>
-
             <br><br>
             <?php echo $_SESSION["pswErr"]; ?>
 
@@ -55,22 +51,6 @@
             <br><br> <div class="kylobot"> <span class="uno">S</span>ei gia registrato? Clicca <a href="login.html" class="lil"> qui </a>. </div>
         </form>
     </div>
-
-    <script>
-        $("#box").on('click',function() {
-            var $pwd = $("#psw");
-            if ($pwd.attr('type') === 'password') {
-                $pwd.attr('type', 'text');
-                $('#occhio').addClass("glyphicon-eye-close");
-                $('#occhio').removeClass("glyphicon-eye-open");
-
-            } else {
-                $pwd.attr('type', 'password');
-                $('#occhio').removeClass("glyphicon-eye-close");
-                $('#occhio').addClass("glyphicon-eye-open");
-            }
-        });
-    </script>
 
 
 </body>
