@@ -1,8 +1,6 @@
 <?php
     session_start();
-
-    include_once 'sign_up.php';
-?>
+    ?>
 
 <html>
 <head>

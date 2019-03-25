@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-//include_once 'utility/debug.php';
+include_once 'utility/debug.php';
 include 'utility/connessione.php';
 include 'utility/utility.php';
 include_once 'utility/utility_accesso.php';
@@ -17,6 +17,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $checkvalidated = true;
 
     validated('username',$usernameErr,$username, $checkvalidated);
+
+    if(!autenticazione($username)){
+        $_SESSION["usernameErr"] = "username already exist";
+        $checkvalidated = false;
+    }
 
     if (empty($_POST["email"])) {
         $_SESSION["emailErr"] = "Email is required";
@@ -48,11 +53,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         }
     }
 
-    if(!autenticazione($username)){
-        $_SESSION["usernameErr"] = "username already exist";
-        $checkvalidated = false;
-    }
-
     if($checkvalidated) {
         QueryRegistration($username, $psw, $email);
         $condition = 'username=' . $username;
@@ -61,6 +61,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         set_info_accesso($row);
         set_login();
         header("Location: pagina_privata.php");
+        exit();
+    }else{
+        header('Location: registration.php');
         exit();
     }
 }

@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    //session_start();
 
     function logout(){
         session_destroy();
@@ -12,7 +12,10 @@
     }
 
     function isLogged() {
-        return $_SESSION['logged'];
+        if(isset($_SESSION['logged']) && !empty($_SESSION['logged']))
+            return $_SESSION['logged'];
+        else
+            return false;
     }
 
     function set_info_accesso($row){

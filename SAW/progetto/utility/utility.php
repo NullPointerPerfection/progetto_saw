@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+//session_start();
 
     function getimg(){
         if(isset($_SESSION['path'])){

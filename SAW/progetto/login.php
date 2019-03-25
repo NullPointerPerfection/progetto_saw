@@ -6,6 +6,10 @@
     include_once 'utility/dbaux.php';
 ?>
 
+<?php
+checklogin();
+?>
+
 <div id="risultato">
     <?php
         if(isset($_SESSION['loginerr'])){
@@ -27,7 +31,3 @@
     </ul>
     <p><input type="image" src="img/button.png" alt="Log in" id="submit" /></p>
 </form>
-
-<?php
-    checklogin();
-?>
