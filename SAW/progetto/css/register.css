@@ -1,11 +1,13 @@
 body{
 	margin: 0px;
 	//overflow: hidden;
+	padding-top:0px;
 }
 
 .module{
 	background: linear-gradient(to top, #910505, black);
-	height: 800px;
+	//height: 800px;
+	//width: 1200px;
 }
 
 .alfa{
