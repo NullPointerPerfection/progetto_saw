@@ -5,7 +5,7 @@
 <html>
 <head>
     <title> Sign In </title>
-    <link rel="stylesheet" type="text/css" href="css/register.css">
+    <link rel="stylesheet" type="text/css" href="css/register2.css">
     <link rel="stylesheet" type="text/css" href="css/font.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">

@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/test3.css">
 
-    <link rel="stylesheet" type="text/css" href="css/register.css">
+    <link rel="stylesheet" type="text/css" href="css/register2.css">
     <link rel="stylesheet" type="text/css" href="css/font.css">
 </head>
 
