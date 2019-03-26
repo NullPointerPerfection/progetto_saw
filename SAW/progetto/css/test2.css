@@ -38,7 +38,7 @@ body{
     z-index: 2;
     position: fixed;
     top: 0%;
-    right: 2%;
+    right: 20px;
     height: 9.2%;
 }
 
@@ -177,7 +177,7 @@ img.navbar-brand{
     width: 225px;
     top:9.2%;
     background-color: #1c1c1c;
-    right:2%;
+    right:20px;
     z-index: 20;
     display:none;
     text-align: center;
@@ -193,7 +193,7 @@ img.navbar-brand{
     text-shadow: 0 0 6px #000000;
 }
 
-.alfa{
+.alfano{
     width: 60%;
     left: 20%;
     display: inline;
@@ -330,4 +330,20 @@ hr{
 .baba{
     color: #bababa;
     font-size: 14px;
+}
+
+.btn-default{
+//background-color: #bababa;
+//border-color: black;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.input-group-btn>.btn{
+    position: fixed;
+}
+
+.eyesh{
+    top: 168px;
+    right: 30px;
 }

@@ -3,7 +3,7 @@
 
     function logout(){
         session_destroy();
-        header("Location: home.html");//TO BE CHANGE
+        header("Location: home.php");//TO BE CHANGE
         exit();
     }
 

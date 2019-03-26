@@ -6,7 +6,7 @@
     if(isLogged())
         echo "PAGINA PRIVATA";
     else {
-        header("location: home.html");
+        header("location: home.php");
         exit();
     }
 ?>
