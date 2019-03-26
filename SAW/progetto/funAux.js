@@ -1,5 +1,5 @@
 function signin(){
-    window.location.href = "register.html";
+    window.location.href = "register.php";
 }
 
 $("#test").click(function(){
@@ -20,6 +20,6 @@ $("#box").on('click',function() {
 });
 
 $("#reg").click(function(){
-    window.location = "register.html";
+    window.location = "register.php";
 });
 
