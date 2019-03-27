@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once 'headerreg.php';
 ?>
 
@@ -13,20 +14,20 @@ include_once 'headerreg.php';
 
 	<form class="formaggio" action="sign_up.php" method="post">
 		<label for="email"> <span class="uno">E</span>-mail:<br> </label>
-		<input class="boxes" type="email" placeholder="" id="email" required> <br><br>
+		<input class="boxes" type="email" placeholder="" id="email" name="email" required> <br><br>
 		<?php echo $_SESSION["emailErr"]; ?>
 
 		<label for="username"> <span class="uno">U</span>sername:<br> </label>
-		<input class="boxes" type="text" placeholder="" id="username" required> <br><br>
+		<input class="boxes" type="text" placeholder="" id="username" name="username" required> <br><br>
 		<?php echo $_SESSION["usernameErr"]; ?>
 
 		<label for="password"> <span class="uno">P</span>assword:<br> </label>
-		<input class="boxes" type="text" placeholder="" id="password" required title="Almeno 8 caratteri, tra cui una lettera maiuscola e un numero."
+		<input class="boxes" type="text" placeholder="" id="psw" name="psw" required title="Almeno 8 caratteri, tra cui una lettera maiuscola e un numero."
 		 pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"> <br><br>
 		<?php echo $_SESSION["pswErr"]; ?>
 
 		<label for="password"> <span class="uno">C</span>onferma <span class="uno">P</span>assword:<br> </label>
-		<input class="boxes" type="text" placeholder="" id="password" required title="Almeno 8 caratteri, tra cui una lettera maiuscola e un numero."
+		<input class="boxes" type="text" placeholder="" id="psw-repeat" name="psw-repeat" required title="Almeno 8 caratteri, tra cui una lettera maiuscola e un numero."
 		 pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"> <br><br>
 		<?php echo $_SESSION["repswErr"]; ?>
 

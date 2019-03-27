@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         header("Location: pagina_privata.php");
         exit();
     }else{
-        header('Location: registration.php');
+        header('Location: register.php');
         exit();
     }
 }
