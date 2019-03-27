@@ -22,4 +22,3 @@ $("#box").on('click',function() {
 $("#reg").click(function(){
     window.location = "register.php";
 });
-

@@ -6,6 +6,8 @@
     include_once 'navbar.php';
 ?>
 
+
+
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -146,7 +148,13 @@
         <br><br>
     </div>
 </div>
-
+<script>
+    $( document ).ready(function() {
+        $('#home').addClass("implementare");
+        $('#compra').removeClass("implementare");
+        $('#chisiamo').removeClass("implementare");
+    });
+</script>
 <?php
     include_once 'footer.php';
 ?>

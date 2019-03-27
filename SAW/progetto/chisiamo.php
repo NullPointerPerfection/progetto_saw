@@ -30,6 +30,14 @@ include_once 'navbar.php';
 	</div>
 </div>
 
+    <script>
+        $( document ).ready(function() {
+            $('#chisiamo').addClass("implementare");
+            $('#compra').removeClass("implementare");
+            $('#home').removeClass("implementare");
+        });
+    </script>
+
 <?php
 include_once 'footer.php';
 ?>
