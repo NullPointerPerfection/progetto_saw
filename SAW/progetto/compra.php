@@ -7,14 +7,27 @@ include_once 'navbar.php';
 ?>
 
 
+<div id="risultati"></div>
 
+
+    <script>
+        $(document).ready(function(){ //prototipo metodo ajax per ricerca
+            $('#invio').click(function () {
+                var username = $("#username").val();
+                var psw = $("#psw").val();
+                $.post("sign_in.php", { username: username, psw: psw }, function(msg){
+                    $('#risultati').html(msg);
+                });
+            });
+        });
+    </script>
 
 
     <script>
         $( document ).ready(function() {
-            $('#compra').addClass("implementare");
-            $('#home').removeClass("implementare");
-            $('#chisiamo').removeClass("implementare");
+            $('#compra').addClass("activ");
+            $('#home').removeClass("activ");
+            $('#chisiamo').removeClass("activ");
         });
     </script>
 <?php

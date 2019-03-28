@@ -150,9 +150,9 @@
 </div>
 <script>
     $( document ).ready(function() {
-        $('#home').addClass("implementare");
-        $('#compra').removeClass("implementare");
-        $('#chisiamo').removeClass("implementare");
+        $('#home').addClass("activ");
+        $('#compra').removeClass("activ");
+        $('#chisiamo').removeClass("activ");
     });
 </script>
 <?php

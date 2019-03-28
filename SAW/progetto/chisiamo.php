@@ -32,9 +32,9 @@ include_once 'navbar.php';
 
     <script>
         $( document ).ready(function() {
-            $('#chisiamo').addClass("implementare");
-            $('#compra').removeClass("implementare");
-            $('#home').removeClass("implementare");
+            $('#chisiamo').addClass("activ");
+            $('#compra').removeClass("activ");
+            $('#home').removeClass("activ");
         });
     </script>
 
