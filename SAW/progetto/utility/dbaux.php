@@ -13,8 +13,11 @@
     function get_info($table, $column, $condition){
         global $con;
 
-        $query = "SELECT".$column." FROM ".$table." WHERE ".$condition.";";
+        $query = "SELECT ".$column." FROM ".$table." WHERE ".$condition.";";
+        $_SESSION['select'] = $query;
         $res = mysqli_query($con, $query);
+        $row = mysqli_fetch_array($res, MYSQLI_ASSOC);
+        if(empty($res)) $_SESSION['query'] = $row;
         return $res;
     }
 

@@ -18,7 +18,7 @@
     <div class="bbk">
         <p class="cstxt jum"><span class="uno">E</span>segui il <span class="uno">L</span>ogin:</p>
         <br>
-        <form method="post" id="login">
+        <form action="sign_in.php" method="post" id="login">
             <div id="risultato"></div>
             <input class="inlo" type="text" placeholder="Username" id="username" name="username" required> <br><br>
             <input class="inlo" type="password" placeholder="Password" id="psw" name="psw" required>
@@ -32,15 +32,3 @@
     </div>
 </div>
 
-<script>
-    $(document).ready(function(){
-        $('#invio').click(function () {
-            var username = $("#username").val();
-            var psw = $("#psw").val();
-            $.post("sign_in.php", { username: username, psw: psw }, function(msg){
-                if(msg != null)
-                    window.location("login.php");
-            });
-        });
-    });
-</script>

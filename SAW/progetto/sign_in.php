@@ -11,14 +11,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = test_input($_POST['username']);
     $psw = sha1(test_input($_POST['psw']));
 
-    $condition = 'username=' . $username . ' AND password =' . $psw . "'";
+    $condition = 'username= \'' . $username . '\' AND password =\'' . $psw . "'";
     $res = get_info("utenti", "*", $condition);
 
     if(!$res){
-        echo " non ti sei loggato con successo: username e/o password non corrette";
+        $_SESSION['error'] = " non ti sei loggato con successo: username e/o password non corrette";
+        header("Location: pagina_errore.php");
+        exit();
     }else {
 
-        if (mysqli_num_rows($res) == 1) {
+        if (mysqli_num_rows($res) > 0) {
             set_login();
             $row = mysqli_fetch_assoc($res);
 
@@ -27,7 +29,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: pagina_privata.php");
             exit();
         } else {
-            echo " non ti sei loggato con successo: username e/o password non corrette";
+            $_SESSION['error'] = " non ti sei loggato con successo: username e/o password non corrette";
+            header("Location: pagina_errore.php");
+            exit();
         }
     }
 }
