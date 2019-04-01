@@ -1,33 +1,33 @@
 <?php
-    session_start();
-    //include 'utility/debug.php';
-    include 'utility/connessione.php';
-    include 'utility/utility.php';
-    include_once 'utility/dbaux.php';
+session_start();
+include_once 'headerreg.php';
 ?>
 
-<?php
-checklogin();
-?>
+<div class="module">
+	<div class="alfa">
+		<div class="tyy uno titolo"> 
+			Azkanta Dream</div>
+		<div class="kylo"> -
+		<span class="uno">I</span>nserisci i tuoi dati per effettuare il <span class="uno">login</span>:-
+		</div>
+		<br><br>
 
-<div id="risultato">
-    <?php
-        if(isset($_SESSION['loginerr'])){
-            echo $_SESSION['loginerr'];
-        }
-    ?>
+	<form class="formaggio" action="sign_up.php" method="post">
+		<label for="username"> <span class="uno">U</span>sername:<br> </label>
+		<input class="boxes" type="text" placeholder="" id="username" name="username" required> <br><br>
+		<?php if(isset($_SESSION["usernameErr"]) && !empty($_SESSION["usernameErr"])) echo $_SESSION["usernameErr"]; ?>
+
+		<label for="password"> <span class="uno">P</span>assword:<br> </label>
+		<input class="boxes" type="text" placeholder="" id="psw" name="psw" required title="Almeno 8 caratteri, tra cui una lettera maiuscola e un numero."
+		 pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"> <br><br>
+		<?php if(isset($_SESSION["pswErr"]) && !empty($_SESSION["pswErr"])) echo $_SESSION["pswErr"]; ?>
+
+		<button class="bottoni" type="submit"> Login </button>
+		<br><br> <div class="kylobot"> <span class="uno">N</span>on hai un profilo? Clicca <a href="register.php" class="lil"> qui </a>. </div>
+	</form>
+	</div> <br><br>
 </div>
 
-<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" id="login">
-    <ul>
-        <li>
-            <label for="username">usrname</label>
-            <input type="text" placeholder="Username" id="username" name="username" required>
-        </li>
-        <li>
-            <label for="pwd">Password</label>
-            <input type="password" name="psw" id="psw" />
-        </li>
-    </ul>
-    <p><input type="image" src="img/button.png" alt="Log in" id="submit" /></p>
-</form>
+<?php
+include_once 'footer.php';
+?>
