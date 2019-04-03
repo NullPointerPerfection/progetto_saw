@@ -6,7 +6,7 @@
 
     function search($value){
         global $con;
-        $query = "SELECT *, MATCH(nome, descrizione) AGAINST('".$value."') AS attinenza FROM articoli WHERE MATCH(nome, descrizione) AGAINST('".$value."') ORDER BY attinenza DESC";
+        $query = "SELECT *, MATCH(nome, descrizione) AGAINST('+".$value."' IN BOOLEAN MODE) AS attinenza FROM articoli WHERE MATCH(nome, descrizione) AGAINST('+".$value."' IN BOOLEAN MODE) ORDER BY attinenza DESC";
         return mysqli_query($con, $query);
     }
 

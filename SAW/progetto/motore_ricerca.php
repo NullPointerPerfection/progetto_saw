@@ -16,9 +16,13 @@
                 $order = $_GET['ordine']; //TO BE CHANGE... come sopra...(i valori possibili sono: crescente/decrescente )
                 echo print_array(filtroOrdinamento($order));
                 break;
-            case 'filtro':
+            case 'filtroOut':// TO BE CHANGE
                 $box = $_GET['categoria'];//come sopra
-                echo print_array(filtroCheckBox($box));
+                echo print_array(filtroCheckOut($box));
+                break;
+            case 'filtroOn':
+                $box = $_GET['categoria'];//come sopra
+                echo print_array(filtroChecked($box));
                 break;
         }
     }else{

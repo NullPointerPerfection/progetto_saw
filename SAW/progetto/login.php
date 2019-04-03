@@ -1,7 +1,21 @@
 <?php
 session_start();
-include_once 'headerreg.php';
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Azkanta Dream </title>
+    <link rel="stylesheet" type="text/css" href="css/carousel.css">
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
+
+    <link rel="stylesheet" type="text/css" href="css/test3.css">
+
+    <link rel="stylesheet" type="text/css" href="css/register.css">
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+</head>
+
+<body>
 
 <div class="module">
 	<div class="alfa">
@@ -12,6 +26,9 @@ include_once 'headerreg.php';
 		</div>
 		<br><br>
 
+        <?php
+            echo $_SESSION['error'];
+        ?>
 	<form class="formaggio" action="sign_up.php" method="post">
 		<label for="username"> <span class="uno">U</span>sername:<br> </label>
 		<input class="boxes" type="text" placeholder="" id="username" name="username" required> <br><br>

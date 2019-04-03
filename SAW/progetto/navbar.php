@@ -32,3 +32,11 @@
     </div>
 </div>
 
+
+<script>
+    $(document).on('click', function (e) {
+        if(!$('#pink').hidden && $(e.target).closest("#test").length === 0)
+            if ($(e.target).closest("#pink").length === 0)
+                $("#pink").hide();
+    });
+</script>

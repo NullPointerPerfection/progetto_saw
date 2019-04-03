@@ -7,10 +7,20 @@ include_once 'navbar.php';
 ?>
 
 
-<div id="risultati"></div>
+    <div id="risultati"></div>
 
+<input type="text" id="input">
 
     <script>
+        $(document).ready(function(){ //prototipo metodo ajax per ricerca
+            $('#input').click(function () {
+                var val = $("#input").val();
+                $.get("motore_ricerca.php", { ricerca: 'ricerca', barra: val }, function(msg){
+                    $('#risultati').html(msg);
+                });
+            });
+        });
+ /*
         $(document).ready(function(){ //prototipo metodo ajax per ricerca
             $('#invio').click(function () {
                 var username = $("#username").val();
@@ -19,7 +29,7 @@ include_once 'navbar.php';
                     $('#risultati').html(msg);
                 });
             });
-        });
+        });*/
     </script>
 
 

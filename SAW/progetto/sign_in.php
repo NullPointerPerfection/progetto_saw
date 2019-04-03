@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if(!$res){
         $_SESSION['error'] = " non ti sei loggato con successo: username e/o password non corrette";
-        header("Location: pagina_errore.php");
+        header("Location: login.php");
         exit();
     }else {
 
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit();
         } else {
             $_SESSION['error'] = " non ti sei loggato con successo: username e/o password non corrette";
-            header("Location: pagina_errore.php");
+            header("Location: login.php");
             exit();
         }
     }

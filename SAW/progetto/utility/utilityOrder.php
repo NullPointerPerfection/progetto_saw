@@ -24,17 +24,17 @@
             $disponibilità = $row["disponibilità"];
             $path_img = $row["path_img"];
 
-            $lista[] = "<div id = 'cella'".$i.">";
+            $lista[] = "<div id = 'cella$i' >";
 
-            $lista[] = "<div id = 'img'".$i.">";
-            $lista[] = "<img src = 'img/'".$path_img.">";
+            $lista[] = "<div id = 'img$i' >";
+            $lista[] = "<img src = 'img/$path_img'>";
             $lista[] = "</div>";
 
-            $lista[] = "<div id = 'txt'".$i.">";
+            $lista[] = "<div id = 'txt$i' >";
             $lista[] = "<div>". $nome. "  ".$prezzo."</div>";
             $lista[] = "</div>";
 
-            $lista[] = "<div id = 'sim'".$i.">";
+            $lista[] = "<div id = 'sim$i' >";
             if($disponibilità == "disponibile")
                 $lista[] = "D";
             elseif ($disponibilità == "non disponibile")
@@ -82,6 +82,34 @@
 
         $_SESSION['oggetti'] = $elem;
         return printOggetti($elem);
+    }
+
+    function filtroChecked($value){ //non so se la gestione degli array è corretta
+
+        $res = get_info("articoli","*","categoria = '".$value."'");
+
+        if($res){
+            $array = $_SESSION['oggetti'];
+            $array .= $res;
+            $_SESSION['oggetti'] = $array;
+        }
+
+        return printOggetti($_SESSION['oggetti']);
+
+    }
+
+    function filtroCheckOut($value){ //stesse perplessità della funzione sopra
+        $elem = $_SESSION['oggetti'];
+
+        $res = array();
+
+        while ($row = mysqli_fetch_array($elem, MYSQLI_ASSOC)) {
+            if($row['categoria'] != $value)
+                $res[] = $row;
+        }
+        $_SESSION['oggetti'] = $res;
+        return printOggetti($res);
+
     }
 
     function filtroCheckBox($value){
