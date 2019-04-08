@@ -11,9 +11,12 @@
     }
 
     function print_array($array){
-        $res = "";
-        foreach ($array as $value)
-            $res .= $value;
-        return $res;
+        if(is_array($array)) {
+            $res = "";
+            foreach ($array as $value)
+                $res .= $value;
+            return $res;
+        }
+        return $array;
     }
 ?>

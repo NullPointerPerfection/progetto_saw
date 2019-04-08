@@ -7,7 +7,7 @@
         $res = search($id);
 
         if (!$res) return "not fuond";
-        if (mysqli_num_rows($res) == 0) return "nessun risultato";
+        if (mysqli_num_rows($res) === 0) return "nessun risultato";
 
         $_SESSION['oggetti'] = $res;
 

@@ -17,7 +17,6 @@
         $_SESSION['select'] = $query;
         $res = mysqli_query($con, $query);
         $row = mysqli_fetch_array($res, MYSQLI_ASSOC);
-        if(empty($res)) $_SESSION['query'] = $row;
         return $res;
     }
 
@@ -49,6 +48,15 @@
             return true;
         }else
             return false;
+    }
+
+    function delete($table, $key, $value){
+        global $con;
+        $query = "DELETE FROM $table WHERE $key = '$value';";
+        $res = mysqli_query($con,$query);
+
+        if($res) return true;
+        return false;
     }
 
 ?>

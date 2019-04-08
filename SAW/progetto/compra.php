@@ -6,14 +6,30 @@ include_once 'header.php';
 include_once 'navbar.php';
 ?>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
     <div id="risultati"></div>
 
-<input type="text" id="input">
+    <input type="text" id="input">
+    <button id="bot">fai partire la ricerca</button>
+
 
     <script>
         $(document).ready(function(){ //prototipo metodo ajax per ricerca
-            $('#input').click(function () {
+            $('#bot').click(function () {
                 var val = $("#input").val();
                 $.get("motore_ricerca.php", { ricerca: 'ricerca', barra: val }, function(msg){
                     $('#risultati').html(msg);

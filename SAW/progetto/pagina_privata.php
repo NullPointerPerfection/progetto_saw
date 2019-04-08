@@ -25,5 +25,17 @@
         logout();
 ?>
 
+<?php
+if(isset($_SESSION['prova']))
+echo $_SESSION['prova'];
+
+else echo "prova non settata";
+if(isset($_SESSION['username']) && !empty($_SESSION['username'])) echo $_SESSION['username'];
+
+else echo "variabile non settata";
+
+?>
+
+
 </body>
 </html>

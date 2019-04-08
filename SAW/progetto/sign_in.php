@@ -3,7 +3,7 @@ session_start();
 include_once 'utility/utility_accesso.php';
 include_once 'utility/debug.php';
 include_once 'utility/dbaux.php';
-
+include_once 'utility/utility.php';
 if(isLogged()) header("location: pagina_privata.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -23,6 +23,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (mysqli_num_rows($res) > 0) {
             set_login();
             $row = mysqli_fetch_assoc($res);
+
+            $_SESSION['prova'] = mysqli_num_rows($row);
 
             set_info_accesso($row);
 
