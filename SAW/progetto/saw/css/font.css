@@ -1,0 +1,24 @@
+@font-face {
+    font-family: Horror;
+    src: url("font/Another Danger - Demo.otf");
+}
+
+@font-face{
+    font-family: Mite;
+    src: url("font/Living Hell.ttf");
+}
+
+@font-face{
+    font-family: Knife;
+    src: url("font/KnifeFightBallet-Regular.otf");
+}
+
+@font-face{
+    font-family: Ohno;
+    src: url("font/Oh no.ttf");
+}
+
+@font-face{
+    font-family: std;
+    src: url("font/DwarvenAxe BB W00 Regular.ttf");
+}
