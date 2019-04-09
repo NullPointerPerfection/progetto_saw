@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
     if($checkvalidated) {
         QueryRegistration($username, $psw, $email);
-        $condition = 'username= \'' . $username. "'";
+        $condition = 'username=' . $username;
         $res = get_info("utenti", "*", $condition);
         $row = mysqli_fetch_assoc($res);
         set_info_accesso($row);
@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 
 function autenticazione($username){
-    $condition = 'username=\'' . $username."'";
+    $condition = 'username=' . $username;
     $res = get_info("utenti","username", $condition);
     return (mysqli_num_rows($res) == 0); //ritorna vero se non c'è username nel database
 }

@@ -6,8 +6,8 @@ include_once 'header.php';
 include_once 'navbar.php';
 ?>
 
-<div class="gradient">
-	<div class="who">
+<div class="redgradient lololo">
+	<div class="who2">
 			<h1 class="csttl qua">Chi siamo?</h1>
 	<p class="cstxt">
 		Prima società editoriale italiana ad azionariato diffuso, Linkiesta.it è un giornale digitale indipendente, libero da ideologie e posizioni precostituite. Dal punto di vista editoriale Linkiesta.it si posiziona come organo di approfondimento e inchieste su politica, economia e finanza, temi sociali. <br>
@@ -25,19 +25,21 @@ include_once 'navbar.php';
 	<p class="cstxt">
 		La missione de Linkiesta.it SpA è quella di diventare operatore di riferimento per la produzione e lo scambio di contenuti, informazioni e idee sui temi rilevanti per la vita quotidiana e per il futuro del nostro Paese e dei suoi cittadini. Intendiamo perseguire questo obiettivo facendo leva sulla conoscenza approfondita delle opportunità che le tecnologie digitali e le nuove piattaforme sociali offrono in termini di diffusione e fruizione delle informazioni. Intendiamo dare vita ad una community il più possibile ampia e coinvolta. Credendo nei valori positivi del mercato, intendiamo perseguire questi obiettivi creando valore per i nostri azionisti.
 		Oggi Linkiesta.it è un giornale online visitato da oltre un milione di lettori unici al mese.
-		<br><br>
 	</p>
 	</div>
 </div>
 
-    <script>
+<script>
         $( document ).ready(function() {
             $('#chisiamo').addClass("activ");
+            $('#chisiamoM').addClass("activ");
             $('#compra').removeClass("activ");
+            $('#compraM').removeClass("activ");
             $('#home').removeClass("activ");
+            $('#homeM').removeClass("activ");
         });
-    </script>
-
+</script>
+    
 <?php
 include_once 'footer.php';
 ?>

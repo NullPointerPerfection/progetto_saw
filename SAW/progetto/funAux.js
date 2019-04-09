@@ -6,6 +6,10 @@ $("#test").click(function(){
     $("#pink").toggle();
 });
 
+$("#menu").click(function(){
+    $("#orange").toggle();
+});
+
 $("#box").on('click',function() {
     var $pwd = $("#psw");
     if ($pwd.attr('type') === 'password') {
@@ -22,3 +26,4 @@ $("#box").on('click',function() {
 $("#reg").click(function(){
     window.location = "register.php";
 });
+
