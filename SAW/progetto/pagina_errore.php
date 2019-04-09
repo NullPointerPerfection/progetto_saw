@@ -9,7 +9,7 @@ include_once 'utility/utilityOrder.php';
 echo $_SESSION['error'];
 
 
-echo print_array(my_search("oggetto"));
+//echo print_array(my_search("oggetto"));
 
 function print_array($array){
     $res = "";
@@ -63,8 +63,17 @@ $key = array("nome", "prezzo", "descrizione", "disponibilità", "categoria", "pa
     });
 </script>*/
 
+$utente = "andrea sei mitico";
+
 ?>
 
+<?php
+echo $utente;
+?>
+
+<?php
+echo $utente." ancora più grande";
+?>
 
 
 
