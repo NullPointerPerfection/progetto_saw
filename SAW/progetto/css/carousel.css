@@ -107,9 +107,7 @@ a.letter:hover, a.letter:active {
 .gradient{
 	background: linear-gradient(to top, #910505, black);
 }
-.gradientrev{
-	background: linear-gradient(to top, black, #910505);
-}
+
 .hilo{
 	width:100%;
 	height: auto;
