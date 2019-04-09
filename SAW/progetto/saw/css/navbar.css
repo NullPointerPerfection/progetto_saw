@@ -1,0 +1,124 @@
+body{
+    background-color: black; //#363738;
+    //background-image: url("sfondo1.png");
+    //background-size: cover;
+    padding-top: 60px;
+    overflow-x: hidden;
+}
+
+.container-fluid{
+    background-color: #2d2d2d;
+    transition:0.8s;
+    transition-timing-function: ease-in;
+}
+
+.container-fluid:hover{
+    background-color: #1c1c1c;
+    transition:1.3s;
+    transition-timing-function: ease-out;
+}
+
+.navbar{
+    border: 0px;
+    min-height: 0px;
+}
+
+.navbar-brand{
+      height: 60px;
+      line-height: 35px;
+      padding-left: 15px;
+      font-size: 30px;
+}
+
+.azk{
+    position: relative;
+    z-index:1;
+    letter-spacing: 3px;
+    word-spacing: 20px;
+    font-family: Horror;
+}
+
+.tyy{
+    text-shadow: 0 0 10px #000000;
+    filter: brightness(0.8);
+    opacity: 0.9;
+}
+
+.navbar-nav  li a {
+    height: 60px;
+    line-height: 35px;
+    font-family: std;
+    font-size: 30px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    text-shadow: 0 0 6px #000000;
+  }
+
+.opulence{
+    padding-left:0.0025%;
+    padding-right:0.0025%;
+}
+
+li.opulence:hover{
+    background-color: black;
+    transition:0.5s;
+}
+
+.carrello{
+    position: absolute;
+    top:0%;
+    z-index: 8;
+    right: 20%;
+    opacity: 0.4;
+}
+
+.pp{
+    width:60px;
+    height:60px;
+    padding: 5px;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    transition: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.pp:hover{
+    padding:1px;
+}
+
+
+img.navbar-brand{
+    display: block;
+    position: absolute;
+    opacity: 0.5;
+    width:76px;
+    height:60px;
+    padding: 0;
+    padding-left:15px;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    left: 110px;
+    filter: contrast(1.1);
+}
+
+.hidfix{
+	position: fixed;
+	width: 50%;
+	background-color: #333333;
+	right:0%;
+	z-index: 20;
+	display:none;
+	
+}
+
+.loggg{
+	height: 60px;
+    line-height: 35px;
+    font-family: std;
+    font-size: 30px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    text-shadow: 0 0 6px #000000;
+}

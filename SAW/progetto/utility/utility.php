@@ -1,7 +1,5 @@
 <?php
-
 //session_start();
-
     function getimg(){
         if(isset($_SESSION['path'])){
             return $_SESSION['path'];
@@ -9,7 +7,6 @@
             return 'img/man5.jpg';
         }
     }
-
     function print_array($array){
         if(is_array($array)) {
             $res = "";
