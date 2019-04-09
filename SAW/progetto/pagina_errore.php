@@ -64,7 +64,6 @@ $key = array("nome", "prezzo", "descrizione", "disponibilità", "categoria", "pa
 </script>*/
 
 $utente = "andrea sei mitico";
-
 ?>
 
 <?php
