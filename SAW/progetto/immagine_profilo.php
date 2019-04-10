@@ -11,7 +11,7 @@
             <div class="modal-body">
 
 
-                <form action="pop-up.php" method="post" id="login">
+                <form action="change_img.php" method="post" id="login">
                         <input type="image" src="img/profilo/1.png" class="imp">
                         <input type="image" src="img/profilo/2.png" class="imp">
                         <input type="image" src="img/profilo/3.png" class="imp">
