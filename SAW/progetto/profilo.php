@@ -19,11 +19,11 @@ include_once 'navbar.php';
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js"></script>
 
-
+<?php //echo $_SESSION['immagine_profilo'];?>
 
 <div class="redgradient lololo">
 	<div class="profbox">
-		<div class="ck"><img src="<?php echo $_SESSION['immagine_profilo'];?>" class="profimg" data-toggle="modal"  href="immagine_profilo.php" data-target="#myModal">
+		<div class="ck"><img id="immagine" src="" class="profimg" data-toggle="modal"  href="immagine_profilo.php" data-target="#myModal">
 		<br>Clicca sull'immagine <br>per cambiarla!
 		</div>
 		<ul class="tees">

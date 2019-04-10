@@ -8,6 +8,9 @@
         $metodo = $_GET['ricerca']; //valore di controllo, con la chiamata ajax settare il valore a seconda di quale chiamata viene effettuata (ricerca, ordinamento, filtro per categorie)
 
         switch ($metodo){
+            case 'tutto':
+                echo print_array(displayAll());
+                break;
             case 'ricerca':
                 $id = $_GET['barra']; //TO BE CHANGE...quando si faranno i form i nomi saranno da cambiare
                 echo print_array(my_search($id));

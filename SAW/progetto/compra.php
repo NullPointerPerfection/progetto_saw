@@ -22,7 +22,7 @@ include_once 'navbar.php';
 ?>
 
 <div class="carlo redgradient">
-	<div class="carlo2">
+	<div id="risultati" class="carlo2">
 		
 		
 		
@@ -96,7 +96,7 @@ include_once 'navbar.php';
 	
 	<div class="carlo3">
 		<form name="modulo"><br><br>
-		<input type="text" placeholder="Ricerca..."><button><i class="glyphicon glyphicon-search"></i></button>
+		<input id="ricerca" name="ricerca" type="text" placeholder="Ricerca..."><button id="bot"><i class="glyphicon glyphicon-search"></i></button>
 		<br><br>
 		<select>
 		  <option value="NomeC">Ordina per nome - A/Z</option>
@@ -113,6 +113,21 @@ include_once 'navbar.php';
 		<input type="checkbox" name="MyCheck" onclick="check(this)"> e <br><br>
 		</form>
 	</div>
+
+    <script>
+        $(document).ready(function () {
+            $.get("motore_ricerca.php", { ricerca: 'tutto' }, function(msg){
+                $('#risultati').html(msg);
+            });
+
+            $('#bot').click(function () {
+                var str = $('#ricerca').val();
+                $.get("motore_ricerca.php", { ricerca: 'ricerca', barra: str }, function(msg){
+                    $('#risultati').html(msg);
+                });
+            })
+        });
+    </script>
 	
 <script>
 function SelezTT(k){

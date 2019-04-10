@@ -11,18 +11,11 @@ if(!isLogged()){
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+    $_SESSION['immagine_profilo'] = $_POST['img'];
+    header('Location: profilo.php');
+    exit();
 
 
-    if(delete("utenti", 'username', $_SESSION['username'])) {
-        session_destroy();
-        header('Location: home.php');
-        exit();
-    }
-    else{
-        $_SESSION['error'] = 'cè stato un problema nella query di cancellazione, per favore riprova più tardi';
-        header("Location: pagina_errore.php");
-        exit();
-    }
 }else{
     header('Location: home.php');
     exit();

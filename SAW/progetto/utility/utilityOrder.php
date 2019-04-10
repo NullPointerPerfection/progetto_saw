@@ -3,6 +3,14 @@
 
     include_once 'dbaux.php';
 
+    function displayAll(){
+        global $con;
+
+        $res = get_info("articoli", "*", null);
+        $_SESSION['oggetti'] = $res;
+        return printOggetti($res);
+    }
+
     function my_search($id){
         $res = search($id);
 

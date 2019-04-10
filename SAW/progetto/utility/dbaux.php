@@ -10,7 +10,10 @@
 
     function get_info($table, $column, $condition){
         global $con;
-        $query = "SELECT ".$column." FROM ".$table." WHERE ".$condition.";";
+        if(empty($condition))
+            $query = "SELECT ".$column." FROM ".$table.";";
+        else
+            $query = "SELECT ".$column." FROM ".$table." WHERE ".$condition.";";
         return mysqli_query($con, $query);
     }
 
