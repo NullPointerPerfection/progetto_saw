@@ -88,8 +88,9 @@
         header("Location: login.php");
         exit();
     }else {
+            $row = mysqli_fetch_array($res, MYSQLI_ASSOC);
             set_login();                 
-            set_info_accesso($res);
+            set_info_accesso($row);
             header("Location: profilo.php");
             exit();
 		}

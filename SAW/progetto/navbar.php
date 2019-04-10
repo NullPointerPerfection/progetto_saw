@@ -26,13 +26,15 @@
     <div class="bbk">
         <p class="cstxt jum"><span class="uno">E</span>segui il <span class="uno">L</span>ogin:</p>
         <br>
-        <input class="inlo" type="text" placeholder="Username" id="username" required> <br><br>
-        <input class="inlo" type="password" placeholder="Password" id="psw" required>
+        <form action="sign_in.php" method="post">
+        <input class="inlo" type="text" placeholder="Username" id="username" name="username" required> <br><br>
+        <input class="inlo" type="password" placeholder="Password" id="psw" name="psw" required>
         <span class="input-group-btn">
             <button id="box" class="eyesh" type="button"><i id="occhio" class="glyphicon glyphicon-eye-open"></i></button>
           </span><br>
         <button class="bolo" type="submit">Accedi</button>
-        <button class="whitebolo" type="submit" id="reg">Registrati</button> <br>
+        <button class="whitebolo" id="reg">Registrati</button> <br>
+        </form>
         <p class="baba"> Hai dimenticato la password? <br><a href="chisiamo.php" class="uno">Clicca qui</a> per riceverla via mail!</p>
     </div>
 </div>
