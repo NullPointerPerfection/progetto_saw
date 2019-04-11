@@ -2,7 +2,7 @@
 
 session_start();
 
-include_once 'utility/utility_accesso.php';
+include_once 'utility/utility_DB.php';
 
 if(!isLogged()){
     $_SESSION['error'] = 'non puoi eliminare il profilo perchè non sei loggato, per favore riprova più tardi';
@@ -12,7 +12,7 @@ if(!isLogged()){
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    if(delete("utenti", 'username', $_SESSION['username'])) {
+    if(Query_delete("utenti", 'username', $_SESSION['username'])) {
         session_destroy();
         header('Location: home.php');
         exit();

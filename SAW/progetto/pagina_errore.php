@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once 'utility/utility_accesso.php';
-include_once 'utility/dbaux.php';
+include_once 'utility/utility_DB.php';
 include_once 'utility/utilityOrder.php';
 
 
@@ -64,6 +64,15 @@ $key = array("nome", "prezzo", "descrizione", "disponibilità", "categoria", "pa
 </script>*/
 
 $utente = "andrea sei mitico";
+
+/*$elem1 = array("andrea","43", "nessuna descrizione", "disponibile", "a", "img/logo2.png");
+
+
+$key = array("nome", "prezzo", "descrizione", "disponibilità", "categoria", "path_img");
+
+
+if(Query_insert("articoli", $key, $elem1)) echo "query insert riuscita";
+else echo "insert non riuscita";*/
 ?>
 
 <?php

@@ -5,7 +5,7 @@ include_once 'utility/debug.php';
 include 'utility/connessione.php';
 include 'utility/utility.php';
 include_once 'utility/utility_accesso.php';
-include_once 'utility/dbaux.php';
+include_once 'utility/utility_DB.php';
 
 if(isLogged()) header("location: pagina_privata.php");
 
@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     if($checkvalidated) {
         QueryRegistration($username, $psw, $email);
         $condition = 'username=' . $username;
-        $res = get_info("utenti", "*", $condition);
+        $res = Query_select("utenti", "*", $condition);
         $row = mysqli_fetch_assoc($res);
         set_info_accesso($row);
         set_login();
@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
 function autenticazione($username){
     $condition = 'username=' . $username;
-    $res = get_info("utenti","username", $condition);
+    $res = Query_select("utenti","username", $condition);
     return (mysqli_num_rows($res) == 0); //ritorna vero se non c'è username nel database
 }
 ?>

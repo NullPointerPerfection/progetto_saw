@@ -1,12 +1,12 @@
 <?php
     session_start();
 
-    include_once 'dbaux.php';
+    include_once 'utility_DB.php';
 
     function displayAll(){
         global $con;
 
-        $res = get_info("articoli", "*", null);
+        $res = Query_select("articoli", "*", null);
         $_SESSION['oggetti'] = $res;
         return printOggetti($res);
     }
@@ -94,7 +94,7 @@
 
     function filtroChecked($value){ //non so se la gestione degli array è corretta
 
-        $res = get_info("articoli","*","categoria = '".$value."'");
+        $res = Query_select("articoli","*","categoria = '".$value."'");
 
         if($res){
             $array = $_SESSION['oggetti'];

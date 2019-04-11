@@ -2,7 +2,7 @@
 session_start();
 include_once 'utility/utility_accesso.php';
 include_once 'utility/debug.php';
-include_once 'utility/dbaux.php';
+include_once 'utility/utility_DB.php';
 include_once 'utility/utility.php';
 if(isLogged()) header("location: pagina_privata.php");
 

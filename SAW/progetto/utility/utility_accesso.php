@@ -1,6 +1,6 @@
 <?php
     //session_start();
-    include_once 'dbaux.php';
+    include_once 'utility_DB.php';
     function logout(){
         session_destroy();
         header("Location: home.php");//TO BE CHANGE
@@ -31,7 +31,7 @@
             $username = test_input($_POST['username']);
             $psw = sha1(test_input($_POST['psw']));
             $condition = 'username=' . $username . ' AND password =' . $psw . "'";
-            $res = get_info("utenti", "*", $condition);
+            $res = Query_select("utenti", "*", $condition);
             if(!$res){
                 $_SESSION['loginerr'] = " non ti sei loggato con successo: username e/o password non corrette";
             }else {
@@ -72,7 +72,7 @@
     function QueryRegistration($username, $psw, $email){
         $elem = array($username,$psw, $email);
         $key = array("username", "password", "mail");
-        if(!insert_info("utenti", $key, $elem)){
+        if(!Query_insert("utenti", $key, $elem)){
             $_SESSION['error'] = "INSERT per registrazione non è andata a buon fine";
             header("Location: pagina_errore.php");
             exit();
@@ -81,7 +81,7 @@
     
     function QueryLogin($username, $psw){
 		    $condition = 'username= \'' . $username . '\' AND password =\'' . $psw . "'";
-    $res = get_info("utenti", "*", $condition);
+    $res = Query_select("utenti", "*", $condition);
     
     if(empty($res)){
         $_SESSION['error'] = " non ti sei loggato con successo: username e/o password non corrette";
