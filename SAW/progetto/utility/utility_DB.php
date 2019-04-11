@@ -46,11 +46,7 @@
         $query = rtrim($query, ",");
         $query .= ");";
 
-        $res = mysqli_query($con,$query);
-        if($res){
-            return true;
-        }else
-            return false;
+        return mysqli_query($con,$query); //boolean
     }
 
     function Query_delete($table, $key, $value){
@@ -61,10 +57,6 @@
         $query = "DELETE FROM $table WHERE $key = '$value';";
         return mysqli_query($con, $query);
 
-
-    }
-
-    function stantement_insert(&$query, $key){
 
     }
 

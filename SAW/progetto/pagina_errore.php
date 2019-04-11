@@ -65,13 +65,13 @@ $key = array("nome", "prezzo", "descrizione", "disponibilità", "categoria", "pa
 
 $utente = "andrea sei mitico";
 
-/*$elem1 = array("andrea","43", "nessuna descrizione", "disponibile", "a", "img/logo2.png");
+/*$elem1 = array("skjfdk","43", "nessuna descrizione", "disponibile", "a", "img/logo2.png");
 
 
 $key = array("nome", "prezzo", "descrizione", "disponibilità", "categoria", "path_img");
 
 
-if(Query_insert("articoli", $key, $elem1)) echo "query insert riuscita";
+if(Query_insert("articoli", null, $elem1)) echo "query insert riuscita";
 else echo "insert non riuscita";*/
 ?>
 
