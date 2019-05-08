@@ -1,6 +1,7 @@
 <?php
     //session_start();
     include_once 'utility_DB.php';
+    include_once 'mysql.php';
     function logout(){
         session_destroy();
         header("Location: home.php");//TO BE CHANGE
@@ -83,7 +84,7 @@
 		    $condition = 'username= \'' . $username . '\' AND password =\'' . $psw . "'";
     $res = Query_select("utenti", "*", $condition);
     
-    if(empty($res)){
+    if(mysqli_num_rows($res) === 0){
         $_SESSION['error'] = " non ti sei loggato con successo: username e/o password non corrette";
         header("Location: login.php");
         exit();
@@ -91,6 +92,8 @@
             $row = mysqli_fetch_array($res, MYSQLI_ASSOC);
             set_login();                 
             set_info_accesso($row);
+            $carrello = new MySQL();
+            $_SESSION['carrello'] = serialize($carrello);
             header("Location: profilo.php");
             exit();
 		}

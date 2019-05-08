@@ -1,136 +1,50 @@
 <?php
-    session_start();
-
     include_once 'utility_DB.php';
-
-    function displayAll(){
-        global $con;
-
-        $res = Query_select("articoli", "*", null);
-        $_SESSION['oggetti'] = $res;
-        return printOggetti($res);
-    }
-
-    function my_search($id){
-        $res = search($id);
-
-        if (!$res) return "not fuond";
-        if (mysqli_num_rows($res) === 0) return "nessun risultato";
-
-        $_SESSION['oggetti'] = $res;
+    function displayAll($ordinamento, $segno){
+		$var = " ORDER BY $ordinamento $segno";
+        $res = Query_select("articoli", "*", null, true, $var);
+		if (!$res){
+            //header('Location: pagina_errore.php');
+            return "<div class='nores'>-NESSUN RISULTATO-<br><img src='img/Castellan.png'></div>";
+            exit();
+        }
+        if (mysqli_num_rows($res) === 0) return "<div class='nores'>-NESSUN RISULTATO-<br><img src='img/Castellan.png'></div>";
 
         return printOggetti($res);
     }
 
+    function my_search($id, $ordinamento, $segno, $categorie){
+        $res = search($id, $ordinamento, $segno, $categorie);
+        if (!$res){
+            header('Location: pagina_errore.php');
+            exit();
+        }
+        if (mysqli_num_rows($res) === 0) return "<div class='nores'>-NESSUN RISULTATO-<br><img src='img/Castellan.png'></div>";
+        return printOggetti($res);
+    }
+    
     function printOggetti($res){
         $lista[] ="<div id = 'box'> ";
         $i = 1;
-
         while ($row = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
             $nome = $row["nome"];
             $prezzo = $row["prezzo"];
-            $disponibilità = $row["disponibilità"];
             $path_img = $row["path_img"];
-
-            $lista[] = "<div id = 'cella$i' >";
-
-            $lista[] = "<div id = 'img$i' >";
-            $lista[] = "<img src = 'img/$path_img'>";
+            $desc = $row["descrizione"];
+            $lista[] = "<div id = 'cella$i' class='ogg'>";
+            $lista[] = "<img src = 'img/articoli/$path_img' class='lx'>";           
+            $lista[] = "<div id = 'txt$i' class='und'>";
+            $lista[] = "<span class='vegas'>$nome</span>";
+            $lista[] = "<div class='amma'>Prezzo: <span class='vegas'>$prezzo$</span>	
+            <button class='toshop' onclick=\"abcd('$nome', 'c$i')\"><i class='glyphicon glyphicon-shopping-cart tbot'></i></button>
+            <br><div id='c$i' class='allerta'></div>
+            </div>";
+            $lista[] = "<br><div class='desc'>$desc</div>";
             $lista[] = "</div>";
-
-            $lista[] = "<div id = 'txt$i' >";
-            $lista[] = "<div>". $nome. "  ".$prezzo."</div>";
-            $lista[] = "</div>";
-
-            $lista[] = "<div id = 'sim$i' >";
-            if($disponibilità == "disponibile")
-                $lista[] = "D";
-            elseif ($disponibilità == "non disponibile")
-                $lista[] = "X";
-            else
-                $lista[] = "L";
-            $lista[] = "</div>";
-
             $lista[] = "</div>";
             $i++;
         }
         $lista[] = "</div>";
         return $lista;
-    }
-
-    function ordinamentoCrescente($aux1, $aux2){
-        $prezzo1 = $aux1['prezzo'];
-        $prezzo2 = $aux2['prezzo'];
-
-        if ($prezzo1 === $prezzo2) {
-            return 0;
-        }
-        return ($prezzo1 > $prezzo2) ? 1 : -1;
-    }
-
-    function ordinamentoDecrescente($aux1, $aux2){
-        $prezzo1 = $aux1['prezzo'];
-        $prezzo2 = $aux2['prezzo'];
-
-        if ($prezzo1 === $prezzo2) {
-            return 0;
-        }
-        return ($prezzo1 < $prezzo2) ? 1 : -1;
-    }
-
-    function filtroOrdinamento($value){
-
-        $elem = $_SESSION['oggetti'];
-
-        if($value == "crescente"){
-            uasort($elem, "ordinamentoCrescente");
-        }elseif ($value == "decrescente"){
-            uasort($elem, "ordinamentoDecrescente");
-        }
-
-        $_SESSION['oggetti'] = $elem;
-        return printOggetti($elem);
-    }
-
-    function filtroChecked($value){ //non so se la gestione degli array è corretta
-
-        $res = Query_select("articoli","*","categoria = '".$value."'");
-
-        if($res){
-            $array = $_SESSION['oggetti'];
-            $array .= $res;
-            $_SESSION['oggetti'] = $array;
-        }
-
-        return printOggetti($_SESSION['oggetti']);
-
-    }
-
-    function filtroCheckOut($value){ //stesse perplessità della funzione sopra
-        $elem = $_SESSION['oggetti'];
-
-        $res = array();
-
-        while ($row = mysqli_fetch_array($elem, MYSQLI_ASSOC)) {
-            if($row['categoria'] != $value)
-                $res[] = $row;
-        }
-        $_SESSION['oggetti'] = $res;
-        return printOggetti($res);
-
-    }
-
-    function filtroCheckBox($value){
-        $elem = $_SESSION['oggetti'];
-
-        $res = array();
-
-        while ($row = mysqli_fetch_array($elem, MYSQLI_ASSOC)) {
-            if($row['categoria'] == $value)
-                $res[] = $row['categoria'];
-        }
-
-        $_SESSION['oggetti'] = $res;
-        return printOggetti($res);
     }
 ?>
