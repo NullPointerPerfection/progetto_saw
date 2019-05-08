@@ -32,7 +32,7 @@ include_once 'headerreg.php';
 		<?php if(isset($_SESSION["repswErr"]) && !empty($_SESSION["repswErr"])) echo $_SESSION["repswErr"]; ?>
 
 		<button class="bottoni" type="submit"> Registrati </button>
-		<br><br> <div class="kylobot"> <span class="uno">S</span>ei gia registrato? Clicca <a href="login.php" class="lil"> qui </a>. </div>
+		<br><br> <div class="kylobot"> <span class="uno">S</span>ei gia registrato? Clicca <a href="login.php" class="lil qui"> qui </a>. </div>
 	</form>
 	</div> <br><br>
 </div>

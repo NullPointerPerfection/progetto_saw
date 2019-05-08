@@ -155,6 +155,10 @@
             $('#compraM').removeClass("activ");
             $('#chisiamo').removeClass("activ");
             $('#chisiamoM').removeClass("activ");
+            $('#carrelloM').removeClass("activ");
+            $('#profiloM').removeClass("activ");
+            $('#carrello2M').removeClass("activ");
+            $('#profilo2M').removeClass("activ");
         });
 </script>
     

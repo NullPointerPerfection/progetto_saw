@@ -37,6 +37,10 @@ include_once 'navbar.php';
             $('#compraM').removeClass("activ");
             $('#home').removeClass("activ");
             $('#homeM').removeClass("activ");
+            $('#carrelloM').removeClass("activ");
+            $('#profiloM').removeClass("activ");
+            $('#carrello2M').removeClass("activ");
+            $('#profilo2M').removeClass("activ");
         });
 </script>
     

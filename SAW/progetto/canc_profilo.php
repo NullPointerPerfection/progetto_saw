@@ -11,7 +11,7 @@
             <div class="modal-body">
 
 
-                <form action="elimina_profilo.php" method="post" id="login" style="text-align: center;">
+                <form action="elim_profilo.php" method="post" id="login" style="text-align: center;">
                         <button data-dismiss="modal" class="whitebolo">No</button>
                         <button type="submit" class="bolo">Si</button>
                     <!--

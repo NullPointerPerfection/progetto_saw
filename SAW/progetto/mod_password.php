@@ -11,12 +11,12 @@
             <div class="modal-body">
 
 
-                <form action="pop-up.php" method="post" id="login" style="text-align: center;">
-                        <input type="text" placeholder="Old password" required>
+                <form action="change_pswd.php" method="post" id="login" style="text-align: center;">
+                        <input name="psw" type="text" placeholder="Old password" required>
                         <br><br>
-                        <input type="text" placeholder="New password" required>
+                        <input name="new" type="text" placeholder="New password" required>
                         <br><br>
-                        <input type="text" placeholder="Confirm password" required>
+                        <input name="conf" type="text" placeholder="Confirm password" required>
 						<br><br>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Chiudi</button>

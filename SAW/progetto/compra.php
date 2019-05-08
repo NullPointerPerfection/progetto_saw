@@ -22,114 +22,118 @@ include_once 'navbar.php';
 ?>
 
 <div class="carlo redgradient">
-	<div id="risultati" class="carlo2">
-		
-		
-		
-		<div class="ogg">
-		<img src="img/Inv_trinket-berserk_charm" class="lx"> 
-		<div class="und"><span class="vegas">Berserk Charm:</span>
-			<div class="desc">I also like to side-step this bug whenever possible. </div>
-			<div class="prez">Prezzo: <span class="vegas">20$</span></div>
-			<div class="amma"> Disponibilità limitata</div>
-		</div>
-		</div>
-		<div class="ogg">
-		<img src="img/Inv_trinket-bleed_charm" class="lx"> 
-		<div class="und"><span class="vegas">Berserk Charm:</span>
-			<div class="desc">I also like to side-step this bug whenever possible. </div>
-			<div class="prez">Prezzo: <span class="vegas">20$</span></div>
-			<div class="amma"> Disponibilità limitata</div>
-		</div>
-		</div>
-		<div class="ogg">
-		<img src="img/Inv_trinket-blight_charm" class="lx"> 
-		<div class="und"><span class="vegas">Berserk Charm:</span>
-			<div class="desc">I also like to side-step this bug whenever possible. </div>
-			<div class="prez">Prezzo: <span class="vegas">20$</span></div>
-			<div class="amma"> Disponibilità limitata</div>
-			</div>
-		</div>
-		<div class="ogg">
-		<img src="img/Inv_trinket-blood_charm" class="lx"> 
-		<div class="und"><span class="vegas">Berserk Charm:</span>
-			<div class="desc">I also like to side-step this bug whenever possible. </div>
-			<div class="prez">Prezzo: <span class="vegas">20$</span></div>
-			<div class="amma"> Disponibilità limitata</div>
-		</div>
-		</div>
-		<div class="ogg">
-		<img src="img/Inv_trinket-chirurgeons_charm" class="lx"> 
-		<div class="und"><span class="vegas">Berserk Charm:</span>
-			<div class="desc">I also like to side-step this bug whenever possible. </div>
-			<div class="prez">Prezzo: <span class="vegas">20$</span></div>
-			<div class="amma"> Disponibilità limitata</div>
-			</div>
-		</div>
-		<div class="ogg">
-		<img src="img/Inv_trinket-dazzling_charm" class="lx"> 
-		<div class="und"><span class="vegas">Berserk Charm:</span>
-			<div class="desc">I also like to side-step this bug whenever possible. </div>
-			<div class="prez">Prezzo: <span class="vegas">20$</span></div>
-			<div class="amma"> Disponibilità limitata</div>
-		</div>
-		</div>
-		<div class="ogg">
-		<img src="img/Inv_trinket-debuff_charm" class="lx"> 
-		<div class="und"><span class="vegas">Berserk Charm:</span>
-			<div class="desc">I also like to side-step this bug whenever possible. </div>
-			<div class="prez">Prezzo: <span class="vegas">20$</span></div>
-			<div class="amma"> Disponibilità limitata</div>
-			</div>
-		</div>
-		<div class="ogg">
-		<img src="img/Inv_trinket-disease_charm" class="lx"> 
-		<div class="und"><span class="vegas">Berserk Charm:</span>
-			<div class="desc">I also like to side-step this bug whenever possible. </div>
-			<div class="prez">Prezzo: <span class="vegas">20$</span></div>
-			<div class="amma"> Disponibilità limitata</div>
-		</div>
-		</div>
+	<div class="carlo2" id="risultati">
 	</div>
 	
 	
 	
 	<div class="carlo3">
-		<form name="modulo"><br><br>
+	<div id="carlo4"></div>
+		
 		<input id="ricerca" name="ricerca" type="text" placeholder="Ricerca..."><button id="bot"><i class="glyphicon glyphicon-search"></i></button>
 		<br><br>
-		<select>
+		<select class="slk" id="ord">
 		  <option value="NomeC">Ordina per nome - A/Z</option>
 		  <option value="NomeD">Ordina per nome - Z/A</option>
 		  <option value="PrezzoC">Ordina per prezzo - crescente</option>
 		  <option value="PrezzoD">Ordina per prezzo - decrescente</option>
 		</select>
 		<br><br>
-		<input type="checkbox" id="k" onclick="SelezTT(this)"> k
-		<input type="checkbox" name="MyCheck" onclick="check(this)"> a <br><br>
-		<input type="checkbox" name="MyCheck" onclick="check(this)"> b 
-		<input type="checkbox" name="MyCheck" onclick="check(this)"> c <br><br>
-		<input type="checkbox" name="MyCheck" onclick="check(this)"> d 
-		<input type="checkbox" name="MyCheck" onclick="check(this)"> e <br><br>
+		<form name="modulo" class="ckbx">
+		<input type="checkbox" id="k" onclick="SelezTT(this)" checked> Seleziona tutto <br>
+		<input class="xxx" id="mycheck" type="checkbox" name="MyCheck" onclick="check(this)" value="Armi" checked> Armi <br>
+		<input class="xxx" id="mycheck" type="checkbox" name="MyCheck" onclick="check(this)" value="Arte" checked> Arte <br>
+		<input class="xxx" id="mycheck" type="checkbox" name="MyCheck" onclick="check(this)" value="Fiale" checked> Fiale <br>
+		<input class="xxx" id="mycheck" type="checkbox" name="MyCheck" onclick="check(this)" value="Gioielli" checked> Gioielli <br>
+		<input class="xxx" id="mycheck" type="checkbox" name="MyCheck" onclick="check(this)" value="Libri" checked> Libri <br>
+		<input class="xxx" id="mycheck" type="checkbox" name="MyCheck" onclick="check(this)" value="Strumenti" checked> Strumenti <br>
+		<input class="xxx" id="mycheck" type="checkbox" name="MyCheck" onclick="check(this)" value="Vestiti" checked> Vestiti <br>
+		<input class="xxx" id="mycheck" type="checkbox" name="MyCheck" onclick="check(this)" value="Altro" checked> Altro <br>
 		</form>
 	</div>
+	
+	<div class="cover">		</div>
 
-    <script>
-        $(document).ready(function () {
-            $.get("motore_ricerca.php", { ricerca: 'tutto' }, function(msg){
-                $('#risultati').html(msg);
-            });
-
-            $('#bot').click(function () {
-                var str = $('#ricerca').val();
-                $.get("motore_ricerca.php", { ricerca: 'ricerca', barra: str }, function(msg){
-                    $('#risultati').html(msg);
-                });
-            })
-        });
-    </script>
+		<div class="centercover">
+	</div>
 	
 <script>
+	
+	function motore(){
+		var segno;
+            if($('#ord').val() === 'NomeC' || $('#ord').val() === 'PrezzoC')
+                segno = 'ASC';
+            else
+                segno = 'DESC';
+
+            var mycheck = new Array();
+            $("#mycheck:checked").each(function() {
+                mycheck.push($(this).val());
+            });
+
+            $.get("motore_ricerca.php", { ricerca: 'ricerca', barra: $('#ricerca').val(), order: $('#ord').val(), segno: segno, categorie: mycheck }, function(msg){
+                $('#risultati').html(msg);
+            });
+	}
+	
+	$(".xxx").change(function(){motore()});
+	$("#ord").click(function(){motore()});
+	
+	
+	function abcd(value, ident){
+		var str = "#" + ident;		
+		$.get("script.php", { prodotto: value, query: "insert"}, function(msg){
+			$(str).fadeIn('slow', function(){
+			$(str).html(msg);
+            $(str).delay(1000).fadeOut(); });
+		});
+	}
+	
+	 $(document).ready(function () {	
+		
+		 $('.slk').change(function () {
+                $.get("motore_ricerca.php", { ricerca: 'ordinamento', ordine: $(this).val() }, function(msg){
+                    $('#risultati').html(msg);
+                });
+
+            });
+            	 	 
+           if($('#k').prop('checked')==true){
+			   var segno;
+				   if($('#ord').val() === 'NomeC' || $('#ord').val() === 'PrezzoC')
+					segno = 'ASC';
+				else
+					segno = 'DESC';
+					
+					var str = $('#ricerca').val();
+					
+			var mycheck = new Array();
+				$("#mycheck:checked").each(function() {
+					mycheck.push($(this).val());
+				});
+			   $.get("motore_ricerca.php", { ricerca: 'ricerca', barra: str,  order: $('#ord').val(), segno: segno, categorie: mycheck }, function(msg){
+                    $('#risultati').html(msg);
+               });
+			}
+        });
+	
+	$('#bot').click(function (e) {
+                var str = $('#ricerca').val();
+                var segno;
+				   if($('#ord').val() === 'NomeC' || $('#ord').val() === 'PrezzoC')
+					segno = 'ASC';
+				else
+					segno = 'DESC';
+					var mycheck = new Array();
+						$("#mycheck:checked").each(function() {
+							mycheck.push($(this).val());
+						});
+                $.get("motore_ricerca.php", { ricerca: 'ricerca', barra: str,  order: $('#ord').val(), segno: segno, categorie: mycheck }, function(msg){
+                    $('#risultati').html(msg);
+                });
+            }); 
+	
+	
 function SelezTT(k){
 	if(k.checked){
 		var i = 0;
@@ -137,6 +141,21 @@ function SelezTT(k){
 		for (i=0; i<modulo.length; i++)
 			if(modulo[i].type == "checkbox")
 				modulo[i].checked = true;
+			var segno;
+				   if($('#ord').val() === 'NomeC' || $('#ord').val() === 'PrezzoC')
+					segno = 'ASC';
+				else
+					segno = 'DESC';
+					
+					var str = $('#ricerca').val();
+					
+			var mycheck = new Array();
+				$("#mycheck:checked").each(function() {
+					mycheck.push($(this).val());
+				});
+			   $.get("motore_ricerca.php", { ricerca: 'ricerca', barra: str,  order: $('#ord').val(), segno: segno, categorie: mycheck }, function(msg){
+                    $('#risultati').html(msg);
+               });
 	} 
 	else{
 		var i = 0;
@@ -144,6 +163,7 @@ function SelezTT(k){
 		for (i=0; i<modulo.length; i++)
 			if(modulo[i].type == "checkbox")
 				modulo[i].checked = false;
+		$('#risultati').html("<div class='nores'>-NESSUN RISULTATO-<br><img src='img/Castellan.png'></div>");
 	}
 }
 
@@ -155,8 +175,16 @@ function check(check){
 			if (modulo[i].type == "checkbox")
 				if(modulo[i].checked == false) return;
 		document.getElementById('k').checked = true;
+		$.get("motore_ricerca.php", {ricerca: 'filtroChecked', categoria: $(this).val()}, function(msg){
+				$('#risultati').html(msg);
+			});
 	}
-	else document.getElementById('k').checked = false;          
+	else{ 
+		document.getElementById('k').checked = false; 
+		$.get("motore_ricerca.php", {ricerca: 'filtroCheckedOut', categoria: $(this).val()}, function(msg){
+				$('#risultati').html(msg);
+			});
+	}		
 }
 </script>
 
@@ -168,6 +196,10 @@ function check(check){
             $('#chisiamoM').removeClass("activ");
             $('#home').removeClass("activ");
             $('#homeM').removeClass("activ");
+            $('#carrelloM').removeClass("activ");
+            $('#profiloM').removeClass("activ");
+            $('#carrello2M').removeClass("activ");
+            $('#profilo2M').removeClass("activ");
         });
 </script>
 

@@ -22,36 +22,54 @@
         </ul>
     </div>
 </div>
+
+<?php
+if(isLogged()){
+	echo '
+	<div class="hidfix" id="pink">
+		<div class="bbk ina">
+			<div class="ricena" id="profiloM"><a href="profilo.php" class="rad">Profilo</a></div>
+			<div class="ricena" id="carrelloM"><a href="carrello.php" class="rad">Carrello</a></div>
+			<div class="ricena" id="logoutM"><a class="rad">Log Out</a></div>
+		</div>
+    </div>
+    ';
+	}else{ echo '
 <div class="hidfix" id="pink">
     <div class="bbk">
         <p class="cstxt jum"><span class="uno">E</span>segui il <span class="uno">L</span>ogin:</p>
         <br>
         <form action="sign_in.php" method="post">
-        <input class="inlo" type="text" placeholder="Username" id="username" name="username" required> <br><br>
-        <input class="inlo" type="password" placeholder="Password" id="psw" name="psw" required>
+        <input class="inlo" type="text" placeholder="Username" name="username" id="username" required> <br><br>
+        <input class="inlo" type="password" placeholder="Password" name="psw" id="psw" required>
         <span class="input-group-btn">
             <button id="box" class="eyesh" type="button"><i id="occhio" class="glyphicon glyphicon-eye-open"></i></button>
           </span><br>
         <button class="bolo" type="submit">Accedi</button>
-        <button class="whitebolo" id="reg">Registrati</button> <br>
-        </form>
+        <button class="whitebolo" id="reg">Registrati</button> <br> </form>
         <p class="baba"> Hai dimenticato la password? <br><a href="chisiamo.php" class="uno">Clicca qui</a> per riceverla via mail!</p>
     </div>
-</div>
-
+</div>';}
+?>
 <div class="tend" id="orange">
 	<div class="ricena" id="homeM"><a href="home.php" class="rad">Home</a></div>
 	<div class="ricena" id="compraM"><a href="compra.php" class="rad">Compra</a></div>
 	<div class="ricena" id="chisiamoM"><a href="chisiamo.php" class="rad">Chi Siamo</a></div>
+	
+	<?php
+		if(!isLogged()){
+			echo '
 	<div class="aper ricena" id="loginM"><a href="login.php" class="rad">Login</a></div>
-	<div class="aper ricena" id="registratiM"><a href="registrati.php" class="rad">Registrati</a></div>
-	<div class="aper ricena" id="profiloM"><a href="profilo.php" class="rad">Profilo</a></div>
-	<div class="aper ricena" id="logoutM"><a class="rad">Log Out</a></div>
+	<div class="aper ricena" id="registratiM"><a href="registrati.php" class="rad">Registrati</a></div>';} else { echo'
+	<div class="aper ricena" id="profilo2M"><a href="profilo.php" class="rad">Profilo</a></div>
+	<div class="aper ricena" id="carrello2M"><a href="carrello.php" class="rad">Carrello</a></div>
+	<div class="aper ricena" id="logoutM"><a class="rad">Log Out</a></div>';} ?>
 </div>
 
 
 
 <script>
+	
 	$(document).on('click', function (e) {
         if(!$('#pink').hidden && $(e.target).closest("#test").length === 0)
             if ($(e.target).closest("#pink").length === 0)
@@ -62,5 +80,18 @@
             if ($(e.target).closest("#orange").length === 0)
                 $("#orange").hide();
     });
+    
+    
+    var lastWidth = $(window).width();
+
+	$(window).resize(function(){
+	   if($(window).width()!=lastWidth){
+		  $('#orange').css({"right": $('#test').outerWidth()});
+		  lastWidth = $(window).width();
+	   }
+	})     
+	$(document).ready( function(){
+		$('#orange').css({"right": $('#test').outerWidth()});
+	});
 </script>
 

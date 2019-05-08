@@ -55,12 +55,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
     if($checkvalidated) {
         QueryRegistration($username, $psw, $email);
-        $condition = 'username=' . $username;
-        $res = Query_select("utenti", "*", $condition);
-        $row = mysqli_fetch_assoc($res);
-        set_info_accesso($row);
-        set_login();
-        header("Location: pagina_privata.php");
+        QueryLogin($username, $psw);
+        header("Location: profilo.php");
         exit();
     }else{
         header('Location: register.php');

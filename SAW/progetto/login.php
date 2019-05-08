@@ -22,7 +22,7 @@ include_once 'headerreg.php';
 		<?php if(isset($_SESSION["pswErr"]) && !empty($_SESSION["pswErr"])) echo $_SESSION["pswErr"]; ?>
 
 		<button class="bottoni" type="submit"> Login </button>
-		<br><br> <div class="kylobot"> <span class="uno">N</span>on hai un profilo? Clicca <a href="register.php" class="lil"> qui </a>. </div>
+		<br><br> <div class="kylobot"> <span class="uno">N</span>on hai un profilo? Clicca <a href="register.php" class="lil qui"> qui </a>. </div>
 	</form>
 	</div> <br><br>
 </div>
