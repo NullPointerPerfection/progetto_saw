@@ -331,6 +331,10 @@ hr{
 	border-top: 1px solid black;
 }
 
+.boloauto{
+	width:auto !important;
+}
+
 .bolo{
     background-color: #910505;
     font-family: std;
@@ -429,6 +433,13 @@ hr{
 	display: inline;
 }
 
+.carr{
+	font-family: horror;
+	color: #910505;
+	font-size: 36px;
+}
+
+
 p{
 	margin: 0px;
 }
@@ -496,6 +507,10 @@ p{
 	font-size: 24px;
 }
 
+.tbot{
+	vertical-align: middle;
+}
+
 .menn{display: none;}
 .aper{display: none;}
 .ricena{
@@ -514,11 +529,18 @@ p{
 	font-size:32px;
 	top: 60px;
 	background-color: rgba(0, 0, 0, .9);
-	right:212px;
+	right: 0px;
 	z-index: 20;
 	display:none;
 	text-align: center;
+	margin-right:20px;
 }
+
+.ina{
+	font-family: std;
+	font-size:32px;
+}
+
 .tend:hover{
     background-color: #1c1c1c;
     transition:1.3s;
@@ -543,7 +565,7 @@ p{
 
 @media screen and (max-width: 680px) {
 	.nasc{display: none;}
-	.nascper{display: none;}
+	.nascper{display: none; width:0px;}
 	.menn{
 		display: inline-block;
 		margin-right:0px;
@@ -555,6 +577,6 @@ p{
 	}
 	.azk{left:20px;}
 	.aper{display:block;}
-	.tend{right:20px;}
+	.tend{right:0px  !important;	margin-right:0px;}
 	.ulgin{right:0px;}
 }

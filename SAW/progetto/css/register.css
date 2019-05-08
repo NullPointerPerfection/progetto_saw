@@ -87,3 +87,15 @@ label{
 	left:0%;
 	background-color: #bababa;
 }
+
+a.qui:link, a.qui:visited {
+    color: #bababa;
+    text-decoration: none;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black !important;
+}
+
+a.qui:hover, a.qui:active {
+    color: #780404;
+    text-decoration: none;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black !important;
+}
